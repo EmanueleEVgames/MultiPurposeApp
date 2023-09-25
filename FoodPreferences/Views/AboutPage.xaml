@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodPreferences.Views.AboutPage"
+             xmlns:vm="clr-namespace:FoodPreferences.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!--<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="40" WidthRequest="400">
+        <Label Text="TITOLO" FontAttributes="Bold" FontSize="Title"/>
+        <Entry x:Name="NameEntry" Placeholder="Name" ReturnType="Next" />
+        <Entry x:Name="EmailEntry" Placeholder="Email" ReturnType="Next" Keyboard="Email" />
+        <Entry x:Name="PhoneEntry" Placeholder="Phone" ReturnType="Next" Keyboard="Numeric"/>
+        <Entry x:Name="FeedbackEntry" Placeholder="Feedback" HeightRequest="100" ReturnType="Send"/>
+        <Button x:Name="SubmitButton" Text="Submit" BackgroundColor="White" Pressed="SubmitButton_Pressed" />
+        <Label x:Name="ResultLabel" IsVisible="false"/>
+    </StackLayout>-->
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10" WidthRequest="400">
+        <Label Text="AGGIUNGI UN ALIMENTO" FontAttributes="Bold" FontSize="Title"/>
+        <Entry x:Name="NameEntry" Placeholder="Nome" ReturnType="Next"  Text="{Binding Name}"/>
+        <Entry x:Name="FoodEntry" Placeholder="Cibo" ReturnType="Next" Text="{Binding Food}"/>
+        <Entry x:Name="PreferenceEntry" Placeholder="Preferenza" ReturnType="Next"  Text="{Binding Preference}" />
+        <Button x:Name="SubmitButton" Text="INVIA" BackgroundColor="Red" Command="{Binding SubmitButtonPressed}" />
+        <Button x:Name="DownloadButton" Text="SCARICA" BackgroundColor="Green" Command="{Binding DownloadButtonPressed}" />
+        <Label x:Name="ResultLabel" IsVisible="false"/>
+
+        <CollectionView ItemsSource="{Binding Feedbacks}" EmptyView="No data">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />                          
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Name}" FontAttributes="Bold" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" BackgroundColor="LightBlue"/>
+                        <Label Text="{Binding Food}" Grid.Row="1" Grid.Column="0"/>
+                        <Label Text="{Binding Preference}" FontAttributes="Italic"  Grid.Row="1" Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+    </StackLayout>
+
+
+
+</ContentPage>

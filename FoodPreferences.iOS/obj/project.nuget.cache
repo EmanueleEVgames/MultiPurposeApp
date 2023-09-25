@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "GG1foP+mH0brjHdTJS781ot9HhIus8hps0WjuAiBMJoiVTh5soNdH4xPCyEkWOjaYdM6jYIVELQUBdBkewCO2A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\edoardo\\source\\repos\\FoodPreferences\\FoodPreferences.iOS\\FoodPreferences.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\edoardo\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
+    "C:\\Users\\edoardo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\edoardo\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\edoardo\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

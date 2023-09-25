@@ -1,0 +1,206 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 132120576 bytes for Failed to commit area from 0x0000000083800000 to 0x000000008b600000 of length 132120576.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3386), pid=5676, tid=15612
+#
+# JRE version:  (11.0.16.1+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.16.1+1-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentpath:C:\Program Files\SentinelOne\Sentinel Agent 23.1.4.650\SentinelJava64.dll 
+
+Host: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3393)
+Time: Mon Sep 25 09:43:01 2023 ora legale Europa occidentale elapsed time: 0.042365 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000016bf4ee6000):  JavaThread "Unknown thread" [_thread_in_vm, id=15612, stack(0x0000005d77b00000,0x0000005d77c00000)]
+
+Stack: [0x0000005d77b00000,0x0000005d77c00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x62652a]
+V  [jvm.dll+0x7b3249]
+V  [jvm.dll+0x7b4938]
+V  [jvm.dll+0x7b5013]
+V  [jvm.dll+0x24fca8]
+V  [jvm.dll+0x62383a]
+V  [jvm.dll+0x617fe5]
+V  [jvm.dll+0x307bac]
+V  [jvm.dll+0x307a32]
+V  [jvm.dll+0x30c746]
+V  [jvm.dll+0x352b9f]
+V  [jvm.dll+0x3525d0]
+V  [jvm.dll+0x2e4ba8]
+V  [jvm.dll+0x2e5d06]
+V  [jvm.dll+0x78d097]
+V  [jvm.dll+0x78e81f]
+V  [jvm.dll+0x35f8e9]
+V  [jvm.dll+0x770000]
+V  [jvm.dll+0x3cd40f]
+V  [jvm.dll+0x3cf7a1]
+C  [InProcessClient64.dll+0x142dc0]
+C  [InProcessClient64.dll+0xf0406]
+C  [InProcessClient64.dll+0xf0352]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17344]
+C  [ntdll.dll+0x526b1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000016bf24eb770, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000016bf4efc000 GCTaskThread "GC Thread#0" [stack: 0x0000005d77c00000,0x0000005d77d00000] [id=8020]
+  0x0000016bf4f2f000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000005d77d00000,0x0000005d77e00000] [id=11772]
+  0x0000016bf4f30000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000005d77e00000,0x0000005d77f00000] [id=4692]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8d86e4377]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000016bf4ee3c00] Heap_lock - owner thread: 0x0000016bf4ee6000
+
+Heap address: 0x0000000083800000, size: 1992 MB, Compressed Oops mode: Non-zero based: 0x0000000083800000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.024 Loaded shared library C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff74bdc0000 - 0x00007ff74bdcd000 	C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\java.exe
+0x0000016bf2bc0000 - 0x0000016bf2db8000 	C:\WINDOWS\SYSTEM32\ntd1l.dll
+0x0000016bf2dc0000 - 0x0000016bf2e7d000 	C:\WINDOWS\System32\kern3l32.dll
+0x00007ff9a3a70000 - 0x00007ff9a3c68000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9a1c70000 - 0x00007ff9a1d2d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff9a1500000 - 0x00007ff9a17f6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff9a0bc0000 - 0x00007ff9a0ed3000 	C:\Program Files\SentinelOne\Sentinel Agent 23.1.4.650\InProcessClient64.dll
+0x00007ff9a1d40000 - 0x00007ff9a1dee000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff9a23e0000 - 0x00007ff9a247e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9a1bd0000 - 0x00007ff9a1c6c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff9a3900000 - 0x00007ff9a3a26000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9a12b0000 - 0x00007ff9a13b0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff999130000 - 0x00007ff999147000 	C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\jli.dll
+0x00007ff997460000 - 0x00007ff997475000 	C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\VCRUNTIME140.dll
+0x00007ff9a3200000 - 0x00007ff9a339e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff9a02e0000 - 0x00007ff9a057a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff9a1a00000 - 0x00007ff9a1a22000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff9a23b0000 - 0x00007ff9a23dc000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9a13e0000 - 0x00007ff9a14fa000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff9a1a30000 - 0x00007ff9a1acd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff9a0770000 - 0x00007ff9a077a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff9a0760000 - 0x00007ff9a076b000 	C:\WINDOWS\SYSTEM32\FLTLIB.DLL
+0x00007ff9a2380000 - 0x00007ff9a23b0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff979a70000 - 0x00007ff979b0b000 	C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\msvcp140.dll
+0x00007ff8d83f0000 - 0x00007ff8d8f7a000 	C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\server\jvm.dll
+0x00007ff9a1d30000 - 0x00007ff9a1d38000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff9908e0000 - 0x00007ff9908e9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff9a2480000 - 0x00007ff9a24eb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff974c20000 - 0x00007ff974c47000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff99e5b0000 - 0x00007ff99e5c2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff99c170000 - 0x00007ff99c180000 	C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\verify.dll
+0x00007ff9a07c0000 - 0x00007ff9a09a4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff9a0780000 - 0x00007ff9a07b4000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff9a1970000 - 0x00007ff9a19f2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff987c30000 - 0x00007ff987c58000 	C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\java.dll
+0x00007ff987c20000 - 0x00007ff987c2a000 	C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\jimage.dll
+0x00007ff9799f0000 - 0x00007ff979a6b000 	C:\Program Files\SentinelOne\Sentinel Agent 23.1.4.650\SentinelJava64.dll
+0x00007ff9a3590000 - 0x00007ff9a36ba000 	C:\WINDOWS\System32\ole32.dll
+0x00007ff9a24f0000 - 0x00007ff9a2844000 	C:\WINDOWS\System32\combase.dll
+0x00007ff979c20000 - 0x00007ff979c38000 	C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\SentinelOne\Sentinel Agent 23.1.4.650;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\server
+
+VM Arguments:
+jvm_args: -agentpath:C:\Program Files\SentinelOne\Sentinel Agent 23.1.4.650\SentinelJava64.dll 
+java_command: <unknown>
+java_class_path (initial): <not set>
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2088763392                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\Program Files\Eclipse Foundation\jdk-8.0.302.8-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\MATLAB\R2020b\bin;C:\Program Files\Calibre2\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\edoardo\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\edoardo\AppData\Local\Programs\Python\Python39\;C:\Users\edoardo\AppData\Local\Microsoft\WindowsApps; C:\src\flutter\bin;C:\Users\edoardo\.dotnet\tools;C:\Users\edoardo\AppData\Local\Microsoft\WindowsApps;C:\Users\edoardo\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\edoardo\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=emanuele
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+TMP=C:\Users\edoardo\AppData\Local\Temp
+TEMP=C:\Users\edoardo\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.3393)
+OS uptime: 0 days 0:57 hours
+Hyper-V role detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 12 microcode 0xec, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 7966M (530M free)
+TotalPageFile size 11966M (AvailPageFile size 112M)
+current process WorkingSet (physical memory assigned to process): 18M, peak: 18M
+current process commit charge ("private bytes"): 63M, peak: 189M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.16.1+1-LTS) for windows-amd64 JRE (11.0.16.1+1-LTS), built on Aug 20 2022 20:09:04 by "" with MS VC++ 15.9 (VS2017)
+
+END.
